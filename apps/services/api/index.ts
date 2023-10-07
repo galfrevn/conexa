@@ -1,1 +1,3 @@
-export default '@/index';
+import app from '@/app';
+
+export default app;
