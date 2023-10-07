@@ -31,7 +31,7 @@ jobs:
         run: pnpm install
 
       - name: Install Vercel CLI
-        run: pnpm install --global vercel@latest
+        run: pnpm install vercel@latest
 
       - name: Deploy Project to Vercel
         run: vercel --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
