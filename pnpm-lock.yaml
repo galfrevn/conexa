@@ -48,6 +48,34 @@ importers:
         specifier: ^0.34.6
         version: 0.34.6
 
+  apps/services:
+    dependencies:
+      '@conexa/database':
+        specifier: workspace:^
+        version: link:../../packages/database
+      '@conexa/environment':
+        specifier: workspace:^
+        version: link:../../packages/environment
+      express:
+        specifier: ^4.18.2
+        version: 4.18.2
+    devDependencies:
+      '@conexa/tsconfig':
+        specifier: workspace:^
+        version: link:../../packages/configuration/tsconfig
+      '@types/express':
+        specifier: ^4.17.18
+        version: 4.17.18
+      ts-node:
+        specifier: ^10.9.1
+        version: 10.9.1(@types/node@20.8.3)(typescript@5.2.2)
+      ts-node-dev:
+        specifier: ^2.0.0
+        version: 2.0.0(@types/node@20.8.3)(typescript@5.2.2)
+      typescript:
+        specifier: ^5
+        version: 5.2.2
+
   apps/site:
     dependencies:
       '@conexa/environment':
@@ -136,34 +164,6 @@ importers:
       '@conexa/tsconfig':
         specifier: workspace:*
         version: link:../configuration/tsconfig
-
-  packages/services:
-    dependencies:
-      '@conexa/database':
-        specifier: workspace:^
-        version: link:../database
-      '@conexa/environment':
-        specifier: workspace:^
-        version: link:../environment
-      express:
-        specifier: ^4.18.2
-        version: 4.18.2
-    devDependencies:
-      '@conexa/tsconfig':
-        specifier: workspace:^
-        version: link:../configuration/tsconfig
-      '@types/express':
-        specifier: ^4.17.18
-        version: 4.17.18
-      ts-node:
-        specifier: ^10.9.1
-        version: 10.9.1(@types/node@20.8.3)(typescript@5.2.2)
-      ts-node-dev:
-        specifier: ^2.0.0
-        version: 2.0.0(@types/node@20.8.3)(typescript@5.2.2)
-      typescript:
-        specifier: ^5
-        version: 5.2.2
 
 packages:
 
