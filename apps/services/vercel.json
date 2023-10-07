@@ -1,4 +1,9 @@
 {
   "name": "conexa-backend",
-  "rewrites": [{ "source": "/(.*)", "destination": "/api" }]
+  "rewrites": [{ "source": "/(.*)", "destination": "/api" }],
+  "git": {
+    "deploymentEnabled": {
+      "main": false
+    }
+  }
 }
