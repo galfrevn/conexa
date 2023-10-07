@@ -1,3 +1,4 @@
 {
+  "name": "conexa-backend",
   "rewrites": [{ "source": "/(.*)", "destination": "/api" }]
 }
