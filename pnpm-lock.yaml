@@ -45,6 +45,49 @@ importers:
         specifier: ^0.34.6
         version: 0.34.6
 
+  apps/site:
+    dependencies:
+      next:
+        specifier: 13.5.4
+        version: 13.5.4(react-dom@18.2.0)(react@18.2.0)
+      react:
+        specifier: ^18
+        version: 18.2.0
+      react-dom:
+        specifier: ^18
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      '@conexa/tsconfig':
+        specifier: workspace:*
+        version: link:../../packages/configuration/tsconfig
+      '@types/node':
+        specifier: ^20
+        version: 20.8.3
+      '@types/react':
+        specifier: ^18
+        version: 18.2.25
+      '@types/react-dom':
+        specifier: ^18
+        version: 18.2.11
+      autoprefixer:
+        specifier: ^10
+        version: 10.4.16(postcss@8.4.31)
+      eslint:
+        specifier: ^8
+        version: 8.51.0
+      eslint-config-next:
+        specifier: 13.5.4
+        version: 13.5.4(eslint@8.51.0)(typescript@5.2.2)
+      postcss:
+        specifier: ^8
+        version: 8.4.31
+      tailwindcss:
+        specifier: ^3
+        version: 3.3.3(ts-node@10.9.1)
+      typescript:
+        specifier: ^5
+        version: 5.2.2
+
   packages/configuration/eslint:
     dependencies:
       eslint-config-next:
@@ -112,49 +155,6 @@ importers:
       ts-node-dev:
         specifier: ^2.0.0
         version: 2.0.0(@types/node@20.8.3)(typescript@5.2.2)
-      typescript:
-        specifier: ^5
-        version: 5.2.2
-
-  packages/site:
-    dependencies:
-      next:
-        specifier: 13.5.4
-        version: 13.5.4(react-dom@18.2.0)(react@18.2.0)
-      react:
-        specifier: ^18
-        version: 18.2.0
-      react-dom:
-        specifier: ^18
-        version: 18.2.0(react@18.2.0)
-    devDependencies:
-      '@conexa/tsconfig':
-        specifier: workspace:*
-        version: link:../configuration/tsconfig
-      '@types/node':
-        specifier: ^20
-        version: 20.8.3
-      '@types/react':
-        specifier: ^18
-        version: 18.2.25
-      '@types/react-dom':
-        specifier: ^18
-        version: 18.2.11
-      autoprefixer:
-        specifier: ^10
-        version: 10.4.16(postcss@8.4.31)
-      eslint:
-        specifier: ^8
-        version: 8.51.0
-      eslint-config-next:
-        specifier: 13.5.4
-        version: 13.5.4(eslint@8.51.0)(typescript@5.2.2)
-      postcss:
-        specifier: ^8
-        version: 8.4.31
-      tailwindcss:
-        specifier: ^3
-        version: 3.3.3(ts-node@10.9.1)
       typescript:
         specifier: ^5
         version: 5.2.2

@@ -5,7 +5,8 @@
   "description": "Conexa's test Services package",
   "author": "Galfré Valentín <galfre.vn@gmail.com>",
   "scripts": {
-    "dev": "ts-node-dev src"
+    "dev": "ts-node-dev src",
+    "build": "tsc"
   },
   "dependencies": {
     "@conexa/database": "workspace:^",

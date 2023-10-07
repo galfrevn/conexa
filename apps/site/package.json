@@ -1,7 +1,9 @@
 {
-  "name": "site",
-  "version": "0.1.0",
+  "name": "@conexa/site",
+  "version": "0.0.1",
   "private": true,
+  "description": "Conexa's test Frontent site package",
+  "author": "Galfré Valentín <galfre.vn@gmail.com>",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
