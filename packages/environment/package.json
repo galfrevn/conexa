@@ -11,5 +11,6 @@
   },
   "devDependencies": {
     "@conexa/tsconfig": "workspace:*"
-  }
+  },
+  "packageManager": "pnpm@8.6.10"
 }

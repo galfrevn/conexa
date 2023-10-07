@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  modularizeImports: ['@conexa/environment']
+  transpilePackages: ['@conexa/environment']
 }
 
 module.exports = nextConfig
