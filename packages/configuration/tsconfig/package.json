@@ -1,0 +1,10 @@
+{
+  "name": "@conexa/tsconfig",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Conexa's test Typescript configuration package",
+  "author": "Galfré Valentín <galfre.vn@gmail.com>",
+  "publishConfig": {
+    "access": "public"
+  }
+}

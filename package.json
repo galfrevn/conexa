@@ -1,17 +1,30 @@
 {
+  "name": "conexa",
+  "version": "0.0.1",
   "private": true,
+  "description": "Conexa's techincal test monorepo",
+  "author": "Galfré Valentín <galfre.vn@gmail.com>",
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "prepare": "husky install",
+    "test": "vitest"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.7.2",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@conexa/tsconfig": "workspace:*",
+    "@types/node": "^20.8.3",
     "eslint": "^8.48.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
     "prettier": "^3.0.3",
-    "tsconfig": "workspace:*",
-    "turbo": "latest"
+    "prettier-plugin-packagejson": "^2.4.6",
+    "prettier-plugin-tailwindcss": "^0.5.5",
+    "turbo": "latest",
+    "vitest": "^0.34.6"
   },
-  "packageManager": "pnpm@8.6.10",
-  "name": "conexa"
+  "packageManager": "pnpm@8.6.10"
 }

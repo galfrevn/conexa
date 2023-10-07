@@ -1,0 +1,15 @@
+{
+  "name": "@conexa/environment",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Conexa's test Environment variables package",
+  "author": "Galfré Valentín <galfre.vn@gmail.com>",
+  "type": "module",
+  "dependencies": {
+    "@t3-oss/env-nextjs": "^0.6.1",
+    "zod": "^3.22.2"
+  },
+  "devDependencies": {
+    "@conexa/tsconfig": "workspace:*"
+  }
+}

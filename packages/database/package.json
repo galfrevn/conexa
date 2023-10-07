@@ -1,0 +1,22 @@
+{
+  "name": "@conexa/database",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Conexa's test Database configuration package",
+  "author": "Galfré Valentín <galfre.vn@gmail.com>",
+  "type": "module",
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "database:generate": "prisma generate",
+    "database:push": "prisma db push",
+    "database:studio": "prisma studio",
+    "lint": "eslint \"**/*.ts*\""
+  },
+  "dependencies": {
+    "@prisma/client": "^5.2.0"
+  },
+  "devDependencies": {
+    "@conexa/tsconfig": "workspace:*",
+    "prisma": "^5.2.0"
+  }
+}
