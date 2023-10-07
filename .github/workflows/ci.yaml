@@ -63,7 +63,7 @@ jobs:
         run: pnpm install -w vercel@latest
 
       - name: Pull Vercel Environment Information
-        run: cd apps/services && vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel apps/services pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
 
       - name: Deploy Project to Vercel
-        run: cd apps/services && vercel --yes --prod --token=${{ secrets.VERCEL_TOKEN }}
+        run: vercel apps/services --yes --prod --token=${{ secrets.VERCEL_TOKEN }}
