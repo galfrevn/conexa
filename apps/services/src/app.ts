@@ -1,14 +1,16 @@
-import express, {  Request, Response , Application } from 'express';
+import express from 'express';
 
-const app: Application = express();
-const port = process.env.PORT || 8000;
+import { setupServer } from '@/lib/setup';
+import { serverConfiguration } from '@/configuration/server';
 
-app.get('/hello', (req: Request, res: Response) => {
-  res.send('Welcome to Express & TypeScript Server');
-});
+const services = async () => {
+  const application = express();
+  setupServer(application);
 
-app.listen(port, () => {
-  console.log(`Server is Fire at http://localhost:${port}`);
-});
+  application.listen(serverConfiguration.port, () => {
+    const { environment, port } = serverConfiguration;
+    console.log(`[${environment}] 🚀 Server is running on port ${port}!`);
+  });
+};
 
-export default app
+services();

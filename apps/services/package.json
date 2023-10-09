@@ -5,19 +5,24 @@
   "description": "Conexa's test Services package",
   "author": "Galfré Valentín <galfre.vn@gmail.com>",
   "scripts": {
-    "dev": "ts-node-dev src",
+    "dev": "ts-node-dev -r tsconfig-paths/register src/app.ts",
     "build": "echo vercel"
   },
   "dependencies": {
     "@conexa/database": "workspace:^",
     "@conexa/environment": "workspace:^",
-    "express": "^4.18.2"
+    "@conexa/schemas": "workspace:^",
+    "@types/cors": "^2.8.14",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "helmet": "^7.0.0"
   },
   "devDependencies": {
     "@conexa/tsconfig": "workspace:^",
     "@types/express": "^4.17.18",
     "ts-node": "^10.9.1",
     "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5"
   },
   "packageManager": "pnpm@8.6.10"
