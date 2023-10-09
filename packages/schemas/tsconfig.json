@@ -1,0 +1,4 @@
+{
+  "extends": "@conexa/tsconfig/react-library.json",
+  "exclude": ["node_modules"]
+}

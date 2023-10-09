@@ -5,8 +5,8 @@ export const environmentVariables = createEnv({
   skipValidation: !!process.env['SKIP_ENV_VALIDATION'],
   experimental__runtimeEnv: process.env,
   server: {
-    NODE_ENV: z.enum(['development', 'test', 'production']),
-    API_URL: z.string().min(1).url(),
+    /* API_URL: z.string().min(1).url(), */
+    API_KEY: z.string().min(1),
     DATABASE_URL: z.string().min(1),
   },
 });

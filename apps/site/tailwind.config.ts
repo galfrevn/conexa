@@ -1,20 +1,46 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';
+import { fontFamily } from 'tailwindcss/defaultTheme';
 
-const config: Config = {
+import { nextui } from '@nextui-org/react';
+
+const configuration: Config = {
+  darkMode: 'class',
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    '../../node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily: {
+        sans: ['var(--font-sans)', ...fontFamily.sans],
+        heading: ['var(--font-starwars)', ...fontFamily.sans],
       },
     },
   },
-  plugins: [],
-}
-export default config
+  plugins: [
+    nextui({
+      themes: {
+        dark: {
+          colors: {
+            focus: {
+              DEFAULT: '#FFE81F',
+            },
+            primary: {
+              DEFAULT: '#FFE81F',
+            },
+          },
+          layout: {
+            boxShadow: {
+              medium: 'none',
+            },
+            radius: {
+              medium: '0px',
+            },
+          },
+        },
+      },
+    }),
+  ],
+};
+export default configuration;

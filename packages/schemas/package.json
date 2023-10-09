@@ -1,0 +1,12 @@
+{
+  "name": "@conexa/schemas",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Conexa's test Schemas package",
+  "author": "Galfré Valentín <galfre.vn@gmail.com>",
+  "packageManager": "pnpm@8.6.10",
+  "devDependencies": {
+    "@conexa/tsconfig": "workspace:^",
+    "typescript": "^5"
+  }
+}
