@@ -1,81 +1,128 @@
-# Turborepo starter
+<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+<a name="readme-top"></a>
+<!--
+*** Thanks for checking out the Best-README-Template. If you have a suggestion
+*** that would make this better, please fork the repo and create a pull request
+*** or simply open an issue with the tag "enhancement".
+*** Don't forget to give the project a star!
+*** Thanks again! Now go create something AMAZING! :D
+-->
 
-This is an official starter Turborepo.
+<!-- PROJECT SHIELDS -->
+<!--
+*** I'm using markdown "reference style" links for readability.
+*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+*** See the bottom of this document for the declaration of the reference variables
+*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+*** https://www.markdownguide.org/basic-syntax/#reference-style-links
+-->
 
-## Using this example
 
-Run the following command:
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="https://github.com/galfrevn/conexa/assets/89883616/3d1ae7dd-ca94-4038-8c28-9eb7171522ae" alt="Starwars" width="160" height="200">
+  </a>
+
+  <h3 align="center">Conexa's Techincal Test</h3>
+
+  <p align="center">
+    Starwars API Fullstack application
+    <br />
+    <a href="https://conexa.galfrevn.com">View Demo</a>
+  </p>
+</div>
+
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+Conexa's Technical Test is a project focused on solving a set of technical challenges using Next.js, Express, and TypeScript. <br /> These technologies serve as the foundation for our exploration, allowing us to dive deep into modern web development practices. <br /> Expect to encounter real-world coding challenges and discover the capabilities of these powerful tools.
+
+<img src="https://github.com/galfrevn/conexa/assets/89883616/e492f1b4-cf6e-4a04-9ba1-87daa2b1470b" width=900 height=700 />
+
+
+
+## Built With
+
+This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+
+[![Next][Next.js]][Next-url] [![React][React.js]][React-url] [![Express][Express]][Express-url] [![Typescript][TS]][TS-url]
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+This is an example of how you may give instructions on setting up your project locally using `pnpm`. 
+To get a local copy up and running, follow these simple steps.
+
+### Prerequisites
+
+You'll need `pnpm` installed. If you don't have it, you can install it with the following command:
 
 ```sh
-npx create-turbo@latest
+npm install -g pnpm
 ```
 
-## What's inside?
+### Installation
 
-This Turborepo includes the following packages/apps:
+To set up this project locally, follow these steps:
 
-### Apps and Packages
+1. Clone the repository and navigate to the project's root directory:
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+   ```sh
+   git clone https://github.com/galfrevn/conexa.git
+   cd conexa
+   ```
+2. Create a .env file in the project's root directory with the following content:
+   ```sh
+   API_URL=http://localhost:5000
+   APP_URL=http://localhost:3000
+   API_KEY=conexa
+   ```
+   Adjust the values as needed for your specific environment.
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+3. Install dependencies using `pnpm`:
+   ```sh
+   pnpm install
+   ```
 
-### Utilities
+4. Start the development server:
+   ```sh
+   pnpm dev
+   ```
 
-This Turborepo has some additional tools already setup for you:
+<!-- CONTACT -->
+## Contact
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+* Valentín Galfré - [@galfrevn](https://linkedin.com/in/galfrevn) - galfre.vn@gmail.com
+* Project Link: [https://github.com/galfrevn/conexa](https://github.com/galfrevn/conexa)
 
-### Build
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-To build all apps and packages, run the following command:
 
-```
-cd my-turborepo
-pnpm build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm dev
-```
-
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
+[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
+[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
+[stars-url]: https://github.com/galfrevn/conexa/stargazers
+[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
+[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+[license-url]: https://github.com/galfrevn/conexa/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/galfrevn
+[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
+[Next-url]: https://nextjs.org/
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org
+[Express]: https://img.shields.io/badge/express-000000?style=for-the-badge&logo=express&logoColor=white
+[Express-url]: https://expressjs.com/es/
+[Express]: https://img.shields.io/badge/express-000000?style=for-the-badge&logo=express&logoColor=white
+[Express-url]: https://expressjs.com/es/
+[TS]: https://img.shields.io/badge/typescript-007acc?style=for-the-badge&logo=typescript&logoColor=white
+[TS-url]: https://www.typescriptlang.org/
