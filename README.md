@@ -40,7 +40,7 @@
 
 Conexa's Technical Test is a project focused on solving a set of technical challenges using Next.js, Express, and TypeScript. <br /> These technologies serve as the foundation for our exploration, allowing us to dive deep into modern web development practices. <br /> Expect to encounter real-world coding challenges and discover the capabilities of these powerful tools.
 
-<img src="https://github.com/galfrevn/conexa/assets/89883616/e492f1b4-cf6e-4a04-9ba1-87daa2b1470b" width=900 height=700 />
+<img src="https://github.com/galfrevn/conexa/assets/89883616/e492f1b4-cf6e-4a04-9ba1-87daa2b1470b" width=900 height=640 />
 
 
 
