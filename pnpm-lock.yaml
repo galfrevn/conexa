@@ -59,10 +59,10 @@ importers:
   apps/services:
     dependencies:
       '@conexa/environment':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../packages/environment
       '@conexa/schemas':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../../packages/schemas
       '@types/cors':
         specifier: ^2.8.14
