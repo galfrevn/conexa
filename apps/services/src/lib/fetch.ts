@@ -1,4 +1,5 @@
 import { removeUndefinedFromObject } from '@/utils';
+export { type StarwarsListResponse } from '@conexa/schemas';
 
 const starwarsApi = 'https://swapi.dev/api';
 
@@ -10,17 +11,8 @@ export const starwarsFetch = async <T>(url: string, configuration: Record<string
 
   const starwarsApiRequest = `${starwarsApiUrl}?${searchParams.toString()}`;
 
-  console.log(starwarsApiRequest);
-
   const response = await fetch(starwarsApiRequest);
   const results = (await response.json()) as T;
 
   return results;
 };
-
-export interface StarwarsListResponse<T> {
-  count: number;
-  next: string | null;
-  previous: string | null;
-  results: T[];
-}

@@ -1,14 +1,16 @@
 import '@/styles/globals.css';
-import Image from 'next/image';
 
 import { Metadata } from 'next';
-import { Inter as FontSans } from 'next/font/google';
+import { Poppins as FontSans } from 'next/font/google';
 import localFont from 'next/font/local';
 
 import { cn } from '@/lib/tailwind';
 
 import { Providers } from '@/components/providers';
 import { Navigation } from '@/components/navigation';
+import { Footer } from '@/components/navigation/footer';
+
+import { StarwarsBackground } from '@/components/background';
 
 export const metadata: Metadata = {
   description: 'Valentín Galfré - Conexa Technical Test',
@@ -20,6 +22,7 @@ export const metadata: Metadata = {
 
 const fontSans = FontSans({
   subsets: ['latin'],
+  weight: ['400', '500', '600'],
   variable: '--font-sans',
 });
 
@@ -30,17 +33,19 @@ const fontStarWars = localFont({
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang='en' suppressHydrationWarning>
+    <html lang='en' className='bg-background dark' suppressHydrationWarning>
       <body
         className={cn(
-          'bg-background dark min-h-screen font-sans antialiased',
+          'text-foreground min-h-screen font-sans antialiased',
           fontSans.variable,
           fontStarWars.variable,
         )}
       >
         <Providers>
+          <StarwarsBackground />
           <Navigation />
-          <main className='mx-auto max-w-3xl pt-40'>{children}</main>
+          <main className='mx-auto max-w-3xl pb-20'>{children}</main>
+          <Footer />
         </Providers>
       </body>
     </html>

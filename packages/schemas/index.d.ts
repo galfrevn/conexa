@@ -1,4 +1,5 @@
 export interface Character {
+  url: string;
   name: string;
   height: string;
   mass: string;
@@ -12,6 +13,7 @@ export interface Character {
 }
 
 export interface Movie {
+  url: string;
   title: string;
   episode_id: number;
   opening_crawl: string;
@@ -24,6 +26,7 @@ export interface Movie {
 }
 
 export interface Planet {
+  url: string;
   name: string;
   rotation_period: string;
   orbital_period: string;
@@ -38,6 +41,7 @@ export interface Planet {
 }
 
 export interface Starship {
+  url: string;
   name: string;
   model: string;
   manufacturer: string;
@@ -53,4 +57,11 @@ export interface Starship {
   starship_class: string;
   pilots: string[];
   films: string[];
+}
+
+export interface StarwarsListResponse<T> {
+  count: number;
+  next: string | null;
+  previous: string | null;
+  results: T[];
 }
