@@ -6,17 +6,16 @@
   "author": "Galfré Valentín <galfre.vn@gmail.com>",
   "scripts": {
     "build": "tsc",
+    "start": "node dist/src/app.js ",
     "dev": "ts-node-dev -r tsconfig-paths/register src/app.ts"
   },
   "dependencies": {
     "@conexa/environment": "workspace:^",
     "@conexa/schemas": "workspace:^",
-    "@netlify/functions": "^2.2.1",
     "@types/cors": "^2.8.14",
     "cors": "^2.8.5",
     "express": "^4.18.2",
-    "helmet": "^7.0.0",
-    "serverless-http": "^3.2.0"
+    "helmet": "^7.0.0"
   },
   "devDependencies": {
     "@conexa/tsconfig": "workspace:^",

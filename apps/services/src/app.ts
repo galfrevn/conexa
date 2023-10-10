@@ -1,5 +1,4 @@
 import express, { Application } from 'express';
-import serverless from 'serverless-http';
 
 import { setupServer } from '@/lib/setup';
 import { serverConfiguration } from '@/configuration/server';
@@ -16,7 +15,7 @@ export const initializeServer = () => {
     console.log(`[${environment}] 🚀 Server is running on port ${port}!`);
   });
 
-  return application;
+  return application
 };
 
-export default serverless(initializeServer());
+initializeServer();
