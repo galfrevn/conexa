@@ -10,7 +10,7 @@
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "prepare": "husky install",
-    "test": "vitest"
+    "test": "dotenv -- vitest"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.2",

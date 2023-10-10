@@ -18,8 +18,8 @@ const workspaceConfiguration = defineWorkspace([
     test: {
       root: 'apps/services',
       name: ' Services ',
-      testTimeout: 10000,
-      maxConcurrency: 5
+      testTimeout: 20000,
+      maxConcurrency: 4,
     },
   },
 ]);
