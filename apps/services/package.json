@@ -9,7 +9,6 @@
     "build": "echo vercel"
   },
   "dependencies": {
-    "@conexa/database": "workspace:^",
     "@conexa/environment": "workspace:^",
     "@conexa/schemas": "workspace:^",
     "@types/cors": "^2.8.14",
