@@ -8,11 +8,11 @@ export const authenticationMiddleware = async (
 ) => {
   const authorization = request.headers['x-api-key'];
 
-  /* if (!authorization || authorization !== environmentVariables.API_KEY) {
+  if (!authorization || authorization !== environmentVariables.API_KEY) {
     return response.status(401).json({
       message: 'Unauthorized',
     });
-  } */
+  }
 
   next();
 };

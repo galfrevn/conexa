@@ -6,6 +6,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src/**/*", "api/*.ts"],
+  "include": ["src/**/*", "api/*.ts", "__tests__/**/*"],
   "exclude": ["node_modules", "dist"]
 }

@@ -1,0 +1,13 @@
+{
+  "name": "Han Solo",
+  "mass": "80",
+  "height": "180",
+  "gender": "male",
+  "birth_year": "29BBY",
+  "hair_color": "brown",
+  "homeworld": "earth",
+  "skin_color": "fair",
+  "url": "unknown",
+  "starships": [],
+  "films": []
+}
