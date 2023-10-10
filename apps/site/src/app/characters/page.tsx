@@ -5,7 +5,7 @@ import { Searcher } from '@/components/searcher';
 import { CharacterCard } from '@/components/character/card';
 import { Paginator } from '@/components/paginator';
 
-/* export const dynamic = 'force-dynamic'; */
+export const dynamic = 'force-dynamic';
 
 const getCharacters = async (searchParams: Record<string, string>) => {
   const params = new URLSearchParams(searchParams);

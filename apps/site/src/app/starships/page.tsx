@@ -5,6 +5,8 @@ import { Searcher } from '@/components/searcher';
 import { Paginator } from '@/components/paginator';
 import { StarshipCard } from '@/components/starships/card';
 
+export const dynamic = 'force-dynamic';
+
 const getStarships = async (searchParams: Record<string, string>) => {
   const params = new URLSearchParams(searchParams);
   const results = await fetch(

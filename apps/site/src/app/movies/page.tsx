@@ -5,6 +5,8 @@ import { Searcher } from '@/components/searcher';
 import { Paginator } from '@/components/paginator';
 import { MovieCard } from '@/components/movie/card';
 
+export const dynamic = 'force-dynamic';
+
 const getMovies = async (searchParams: Record<string, string>) => {
   const params = new URLSearchParams(searchParams);
   const results = await fetch(`${environmentVariables.APP_URL}/api/movies?${params.toString()}`, {
