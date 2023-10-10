@@ -6,6 +6,10 @@
       "dependsOn": ["^build"],
       "outputs": ["dist/**", ".next/**"]
     },
+    "build:services": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"]
+    },
     "start:services": {
       "dependsOn": ["^build"],
       "dotEnv": [".env"]

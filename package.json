@@ -6,11 +6,12 @@
   "author": "Galfré Valentín <galfre.vn@gmail.com>",
   "scripts": {
     "build": "dotenv -- turbo run build",
+    "build:services": "dotenv -- turbo run build:services",
     "dev": "dotenv -- turbo run dev",
-    "start:services": "dotenv -- turbo run start:services", 
-    "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "lint": "turbo run lint",
     "prepare": "husky install",
+    "start:services": "dotenv -- turbo run start:services",
     "test": "dotenv -- vitest"
   },
   "devDependencies": {

@@ -5,7 +5,7 @@
   "description": "Conexa's test Services package",
   "author": "Galfré Valentín <galfre.vn@gmail.com>",
   "scripts": {
-    "build": "tsc",
+    "build:services": "tsc",
     "start:services": "node dist/src/app.js ",
     "dev": "ts-node-dev -r tsconfig-paths/register src/app.ts"
   },
