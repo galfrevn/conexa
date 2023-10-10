@@ -33,10 +33,19 @@ jobs:
       - name: 📦 Setup Node & Install dependencies
         uses: ./.github/actions/setup
 
+      - name: 📦 Create environment file
+        run: |
+          touch .env
+          echo API_URL=${{ secrets.TEST_API_URL }} >> .env
+          echo APP_URL=${{ secrets.TEST_APP_URL }} >> .env
+          echo API_KEY=${{ secrets.TEST_API_KEY }} >> .env
+
       - name: 🧪 Run unit tests
         run: pnpm test
+        
 
   backend:
+    name: '(Production) Deploy backend package'
     runs-on: ubuntu-latest
     needs: [metadata, testing]
     steps:
@@ -55,6 +64,7 @@ jobs:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
 
   frontend:
+    name: '(Production) Deploy frontend package'
     runs-on: ubuntu-latest
     needs: [metadata, testing]
     steps:
