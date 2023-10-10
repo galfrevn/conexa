@@ -3,6 +3,7 @@ name: Conexa Techincal Test Deployment
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+  RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
 
 on:
   push:
@@ -10,16 +11,25 @@ on:
       - main
 
 jobs:
-  frontend:
+  # Pull metadata
+  metadata:
+    name: 'Pull environment metadata'
     runs-on: ubuntu-latest
+    environment: production
     steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 2
+      - name: Pull request details
+        run: |
+          echo "⛓️ Repository: ${{ github.event.repository.name }}"
+          echo "⛓️ Branch: ${{ github.event.repository.default_branch }}"
 
-      - uses: pnpm/action-setup@v2.0.1
-        with:
-          version: 8.7.0
+  # Setup Node.js environment and cache dependencies
+  setup:
+    name: 'Workflow setup'
+    runs-on: ubuntu-latest
+    needs: [metadata]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v3
@@ -28,7 +38,44 @@ jobs:
           cache: 'pnpm'
 
       - name: Install dependencies
-        run: pnpm install
+        uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 8.7.0
+
+  testing:
+    name: 'Unit testing checks'
+    runs-on: ubuntu-latest
+    needs: [setup]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run unit tests
+        run: pnpm test
+
+  backend:
+    runs-on: ubuntu-latest
+    needs: [setup, testing]
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+
+      - name: Install Railwail CLI
+        run: pnpm install -w @railway/cli@latest
+
+      - name: Deploy backend package
+        run: railway up
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+
+  frontend:
+    runs-on: ubuntu-latest
+    needs: [setup, testing]
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
 
       - name: Install Vercel CLI
         run: pnpm install -w vercel@latest
