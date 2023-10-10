@@ -19,4 +19,4 @@ export const initializeServer = () => {
   return application;
 };
 
-serverless(initializeServer());
+export default serverless(initializeServer());
