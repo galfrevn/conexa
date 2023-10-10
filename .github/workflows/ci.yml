@@ -56,7 +56,7 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: 📦 Install Railwail CLI
-        run: pnpm install -w @railway/cli@latest
+        run: pnpm install -g @railway/cli
 
       - name: 🚀 Deploy backend package
         run: railway up
