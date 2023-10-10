@@ -1,3 +1,3 @@
-import serverless from '@/app'
+const serverless = require('@/app')
 
-export const handler = serverless
+module.exports.handler = serverless
