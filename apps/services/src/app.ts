@@ -1,7 +1,7 @@
 import express from 'express';
 
-import { setupServer } from './lib/setup';
-import { serverConfiguration } from './configuration/server';
+import { setupServer } from '@/lib/setup';
+import { serverConfiguration } from '@/configuration/server';
 
 const services = async () => {
   const application = express();

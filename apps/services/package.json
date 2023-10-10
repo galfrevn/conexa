@@ -5,8 +5,8 @@
   "description": "Conexa's test Services package",
   "author": "Galfré Valentín <galfre.vn@gmail.com>",
   "scripts": {
-    "dev": "ts-node-dev -r tsconfig-paths/register src/app.ts",
-    "build": "echo vercel"
+    "build": "ts-node -r tsconfig-paths/register src/app.ts",
+    "dev": "ts-node-dev -r tsconfig-paths/register src/app.ts"
   },
   "dependencies": {
     "@conexa/environment": "workspace:^",
