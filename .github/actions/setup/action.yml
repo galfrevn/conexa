@@ -3,10 +3,6 @@
 # It is used in almost all workflows to set up the environment and install dependencies.
 # Updating  the package manager or Node version here will be reflected in all workflows.
 
-# 👀 Example usage:
-#       - name : 📦 Setup Node + PNPM + install deps
-#         uses: ./.github/actions/setup-node-pnpm-install
-
 name: 'Setup Node & Install dependencies'
 description: 'Setup Node environment with PNPM and Dependencies'
 runs:
