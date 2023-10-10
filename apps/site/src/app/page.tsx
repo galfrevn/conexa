@@ -9,19 +9,19 @@ export default function Homepage() {
     <Fragment>
 
       <div className='mt-8 grid grid-cols-1 gap-4 px-4 lg:grid-cols-2'>
-        <Card isPressable isHoverable as={Link} href='/characters'>
+        <Card className='border-danger border' isPressable isHoverable as={Link} href='/characters'>
           <CardBody>Characters</CardBody>
         </Card>
 
-        <Card isPressable isHoverable as={Link} href='/movies'>
+        <Card className='border-secondary border' isPressable isHoverable as={Link} href='/movies'>
           <CardBody>Movies</CardBody>
         </Card>
 
-        <Card isPressable isHoverable as={Link} href='/starships'>
+        <Card className='border-success border' isPressable isHoverable as={Link} href='/starships'>
           <CardBody>Starships</CardBody>
         </Card>
 
-        <Card isPressable isHoverable as={Link} href='/planets'>
+        <Card className='border-warning border' isPressable isHoverable as={Link} href='/planets'>
           <CardBody>Planets</CardBody>
         </Card>
       </div>

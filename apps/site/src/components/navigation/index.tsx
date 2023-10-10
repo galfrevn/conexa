@@ -21,7 +21,7 @@ export function Navigation() {
       isBordered
       classNames={{ wrapper: 'px-2 lg:h-40' }}
     >
-      <NavbarContent className='flex !justify-center lg:hidden'>
+      <NavbarContent className='flex !justify-between lg:hidden'>
         <Button
           isIconOnly
           radius='full'
@@ -51,7 +51,7 @@ export function Navigation() {
           <NavigationButton label='Movies' href='/movies' />
           <NavigationButton label='Starships' href='/starships' />
           <NavigationButton label='Planets' href='/planets' />
-          {/* <NavigationButton label='Saved' href='/saved' /> */}
+          <NavigationButton label='Bookmarks' href='/bookmarks' />
         </ul>
       </NavbarContent>
 
@@ -75,6 +75,9 @@ export function Navigation() {
         </NavbarMenuItem>
         <NavbarMenuItem>
           <NavigationButton onClick={() => setIsMenuOpen(false)} label='Planets' href='/planets' />
+        </NavbarMenuItem>
+        <NavbarMenuItem>
+          <NavigationButton onClick={() => setIsMenuOpen(false)} label='Bookmarks' href='/bookmarks' />
         </NavbarMenuItem>
       </NavbarMenu>
     </Navbar>

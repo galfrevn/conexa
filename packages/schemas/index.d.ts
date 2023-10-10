@@ -59,6 +59,8 @@ export interface Starship {
   films: string[];
 }
 
+export type Bookmark = Planet | Character | Movie | Starship;
+
 export interface StarwarsListResponse<T> {
   count: number;
   next: string | null;

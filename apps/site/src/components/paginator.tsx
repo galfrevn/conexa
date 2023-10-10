@@ -38,16 +38,17 @@ export function Paginator({ total }: ProductPaginatorProps) {
         router.push(pathname + updatedSearchParams(page));
       });
     },
-    [currentPage],
+    [currentPage, pathname],
   );
 
   return (
     <div className='mt-4 flex items-center space-x-4'>
       <Pagination
         radius='sm'
+        disableCursorAnimation
         variant='bordered'
         classNames={{
-          cursor: 'text-background font-semibold',
+          cursor: 'text-black font-semibold',
         }}
         total={totalPages}
         page={clientCurrentStep}

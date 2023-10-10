@@ -27,40 +27,28 @@ export default async function SingleMoviePage({ params: { id } }) {
 
       <p className='text-foreground/60 my-5 text-center'>{movie.opening_crawl}</p>
 
-      <div className='text-small flex h-auto w-full flex-col items-center justify-center space-y-2 md:flex-row md:space-x-4 md:space-y-0'>
-        <Tooltip showArrow content='Director'>
+      <div className='text-small flex h-auto w-full flex-col items-center justify-center space-y-2 md:flex-row md:space-x-6 md:space-y-0'>
+        
+        <div className='flex flex-col items-center space-y-2'>
+          <p>Director</p>
           <Chip variant='flat'>
             <p>{movie.director}</p>
           </Chip>
-        </Tooltip>
+        </div>
 
-        <Tooltip showArrow content='Producer'>
+        <div className='flex flex-col items-center space-y-2'>
+          <p>Producer</p>
           <Chip variant='flat'>
             <p>{movie.producer}</p>
           </Chip>
-        </Tooltip>
+        </div>
 
-        <Tooltip showArrow content='Release date'>
+        <div className='flex flex-col items-center space-y-2'>
+          <p>Release date</p>
           <Chip variant='flat'>
             <p>{movie.release_date}</p>
           </Chip>
-        </Tooltip>
-      </div>
-
-      <Divider orientation='horizontal' className='my-5 md:my-10' />
-
-      <div className='grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3'>
-        <section>
-          <h2 className='text-center font-semibold'>Planets</h2>
-        </section>
-
-        <section>
-          <h2 className='text-center font-semibold'>Characters</h2>
-        </section>
-
-        <section>
-          <h2 className='text-center font-semibold'>Starships</h2>
-        </section>
+        </div>
       </div>
     </section>
   );

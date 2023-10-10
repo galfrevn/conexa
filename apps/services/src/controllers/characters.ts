@@ -1,11 +1,13 @@
-import { starwarsFetch, StarwarsListResponse } from '@/lib/fetch';
-import { Character } from '@conexa/schemas';
 import { Router } from 'express';
+import { Character } from '@conexa/schemas';
+
+import { cache } from '@/lib/cache';
+import { starwarsFetch, StarwarsListResponse } from '@/lib/fetch';
 
 export const charactersRoute = '/characters';
 export const charactersRouter: Router = Router();
 
-charactersRouter.get('/', async (request, response) => {
+charactersRouter.get('/', cache, async (request, response) => {
   const search = request.query.search;
   const page = request.query.page;
 
