@@ -25,20 +25,20 @@ jobs:
   testing:
     name: 'Unit testing checks'
     runs-on: ubuntu-latest
-    needs: [setup]
+    needs: [metadata]
     steps:
       - name: 📦 Checkout project repository
         uses: actions/checkout@v3
 
       - name: 📦 Setup Node & Install dependencies
-        uses: actions/setup
+        uses: ./.github/actions/setup
 
       - name: 🧪 Run unit tests
         run: pnpm test
 
   backend:
     runs-on: ubuntu-latest
-    needs: [setup, testing]
+    needs: [metadata, testing]
     steps:
       - name: 📦 Checkout project repository
         uses: actions/checkout@v3
@@ -56,7 +56,7 @@ jobs:
 
   frontend:
     runs-on: ubuntu-latest
-    needs: [setup, testing]
+    needs: [metadata, testing]
     steps:
       - name: 📦 Checkout project repository
         uses: actions/checkout@v3
