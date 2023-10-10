@@ -14,6 +14,7 @@ import { StarwarsBackground } from '@/components/background';
 
 export const metadata: Metadata = {
   description: 'Valentín Galfré - Conexa Technical Test',
+  themeColor: '#000000',
   title: {
     absolute: 'Conexa Techincal Test',
     template: '%s | Conexa',

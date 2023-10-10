@@ -4,14 +4,17 @@ import { Card, CardHeader } from '@nextui-org/card';
 
 import { starwarsEntityId } from '@/lib/params';
 import { BookmarksButton } from '@/components/bookmarks/button';
-import { Chip } from '@nextui-org/react';
-import { cn } from '@/lib/tailwind';
 
 const getEntityFromUrl = (url: string) => {
   const urlParts = url.split('/');
   const entity = urlParts[urlParts.length - 3];
 
-  return entity;
+  const parsedEntity = entity === 'people' ? 'characters' : entity === 'films' ? 'movies' : entity;
+
+  return {
+    name: entity,
+    parsed: parsedEntity,
+  };
 };
 
 // #TODO: Use the Bookmark type
@@ -25,11 +28,11 @@ export function BookmarkCard(props: any) {
         isHoverable
         isPressable
         as={Link}
-        href={`/characters/${starwarsEntityId(props.url)}`}
+        href={`/${entity.parsed}/${starwarsEntityId(props.url)}`}
       >
         <CardHeader className='flex flex-col items-start space-y-1'>
           {props.name || props.title}
-          <span className='text-xs capitalize text-neutral-600'>{entity}</span>
+          <span className='text-xs capitalize text-neutral-600'>{entity.name}</span>
         </CardHeader>
       </Card>
       <BookmarksButton entity={props} />
