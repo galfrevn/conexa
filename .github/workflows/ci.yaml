@@ -22,48 +22,34 @@ jobs:
           echo "⛓️ Repository: ${{ github.event.repository.name }}"
           echo "⛓️ Branch: ${{ github.event.repository.default_branch }}"
 
-  # Setup Node.js environment and cache dependencies
-  setup:
-    name: 'Workflow setup'
-    runs-on: ubuntu-latest
-    needs: [metadata]
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-
-      - name: Install dependencies
-        uses: pnpm/action-setup@v2.0.1
-        with:
-          version: 8.7.0
-
   testing:
     name: 'Unit testing checks'
     runs-on: ubuntu-latest
     needs: [setup]
     steps:
-      - name: Checkout code
+      - name: 📦 Checkout project repository
         uses: actions/checkout@v3
 
-      - name: Run unit tests
+      - name: 📦 Setup Node & Install dependencies
+        uses: ./.github/actions/setup
+
+      - name: 🧪 Run unit tests
         run: pnpm test
 
   backend:
     runs-on: ubuntu-latest
     needs: [setup, testing]
     steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 2
+      - name: 📦 Checkout project repository
+        uses: actions/checkout@v3
 
-      - name: Install Railwail CLI
+      - name: 📦 Setup Node & Install dependencies
+        uses: ./.github/actions/setup
+
+      - name: 📦 Install Railwail CLI
         run: pnpm install -w @railway/cli@latest
 
-      - name: Deploy backend package
+      - name: 🚀 Deploy backend package
         run: railway up
         env:
           RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
@@ -72,15 +58,17 @@ jobs:
     runs-on: ubuntu-latest
     needs: [setup, testing]
     steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 2
+      - name: 📦 Checkout project repository
+        uses: actions/checkout@v3
 
-      - name: Install Vercel CLI
+      - name: 📦 Setup Node & Install dependencies
+        uses: ./.github/actions/setup
+
+      - name: 📦 Install Vercel CLI
         run: pnpm install -w vercel@latest
 
-      - name: Pull Vercel Environment Information
+      - name: 🔒 Pull Vercel Environment Information
         run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
 
-      - name: Deploy Project to Vercel
+      - name: 🚀 Deploy Project to Vercel
         run: vercel --yes --prod --token=${{ secrets.VERCEL_TOKEN }}
