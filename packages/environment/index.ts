@@ -9,6 +9,5 @@ export const environmentVariables = createEnv({
     APP_URL: z.string().min(1),
     API_URL: z.string().min(1),
     API_KEY: z.string().min(1),
-    DATABASE_URL: z.string().min(1),
   },
 });
