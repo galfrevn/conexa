@@ -7,6 +7,7 @@
   "scripts": {
     "build": "dotenv -- turbo run build",
     "dev": "dotenv -- turbo run dev",
+    "start:services": "dotenv -- turbo run start:services", 
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "prepare": "husky install",

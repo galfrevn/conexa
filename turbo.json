@@ -6,6 +6,10 @@
       "dependsOn": ["^build"],
       "outputs": ["dist/**", ".next/**"]
     },
+    "start:services": {
+      "dependsOn": ["^build"],
+      "dotEnv": [".env"]
+    },
     "lint": {},
     "dev": {
       "cache": false,
