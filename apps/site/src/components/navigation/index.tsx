@@ -22,7 +22,13 @@ export function Navigation() {
       classNames={{ wrapper: 'px-2 lg:h-40' }}
     >
       <NavbarContent className='flex !justify-center lg:hidden'>
-        <Button isIconOnly radius='full' variant='light' onClick={() => setIsMenuOpen(!isMenuOpen)}>
+        <Button
+          isIconOnly
+          radius='full'
+          variant='light'
+          data-testid={isMenuOpen ? 'menu-close-button' : 'menu-open-button'}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
           {isMenuOpen ? <Icons.close className='h-5 w-5' /> : <Icons.menu className='h-5 w-5' />}
         </Button>
 
