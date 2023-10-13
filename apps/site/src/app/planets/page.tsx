@@ -5,7 +5,7 @@ import { Searcher } from '@/components/searcher';
 import { Paginator } from '@/components/paginator';
 import { PlanetCard } from '@/components/planet/card';
 
-export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 const getPlanets = async (searchParams: Record<string, string>) => {
   const params = new URLSearchParams(searchParams);
